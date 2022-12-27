@@ -1,3 +1,4 @@
+<jsp:include page="Home_page.jsp"/>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -14,7 +15,7 @@
 <div class="container my-3 col-lg-4 col-md-6">
     <div class="row d-flex justify-content-center align-items-center">
         <h1 style="text-align: center">Sign in</h1>
-        <form action="" class="needs-validation" name="sign_in" method="post">
+        <form action="#" th:action="@{/sign_in_submit}" class="needs-validation" name="sign_in" method="post">
             <div class="mb-3 mt-3">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" placeholder="Email" name="email" id="email">
@@ -35,6 +36,9 @@
                 <br><a href="create_account">Create account</a>
             </div>
         </form>
+        <%
+            String companyWebsite = "123";
+        %>
     </div>
     <script>
         function myFunction() {
